@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood & Record | 상황별 큐레이션</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #333; }
+    .logo { font-size: 24px; font-weight: bold; }
+    .gnb { display: flex; gap: 30px; }
+    .gnb li a { font-size: 16px; transition: color 0.3s, border-bottom 0.3s; padding-bottom: 5px; }
+    .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
+    
+
+    .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+    .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
+    .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
+    
+   
+    footer { text-align: center; padding: 30px; border-top: 1px solid #333; color: #777; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Mood & Record</a></div>
+        <ul class="gnb">
+            <li><a href="situation.html" class="active">상황별 큐레이션</a></li>
+            <li><a href="genre.html">장르별 탐색</a></li>
+            <li><a href="artist.html">이달의 아티스트</a></li>
+            <li><a href="hidden.html">숨은 명곡 찾기</a></li>
+            <li><a href="trend.html">음악 트렌드</a></li>
+        </ul>
+    </header>
+
+    <div class="sub-container">
+        <h2 class="page-title">상황별 큐레이션</h2>
+        <p class="page-desc">당신의 일상 속 다양한 상황과 감정을 압도적으로 담아내는 맞춤형 큐레이션</p>
+        
+        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
+            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">테마: #새벽_공기_아래서_듣기_좋은_노래</p>
+            
+            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo2-1.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px;">01. 너드커넥션 - 좋은 밤 좋은 꿈</h4>
+                    <p style="color: #aaa;"><strong>추천이유:</strong> 하루의 마침표를 찍는 시간, 다정한 목소리와 서정적인 멜로디가 당신의 새벽을 가장 따뜻하게 안아줍니다. 독서의 몰입도를 높여주는 배경음악으로 추천합니다.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo2-2.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px;">02. 검정치마 - Antifreeze</h4>
+                    <p style="color: #aaa;"><strong>추천 이유:</strong> 얼어붙은 일상을 녹이는 가장 뜨겁고도 다정한 선언 같은 곡입니다. "우린 하루 종일 아무것도 안 해도 괜찮아"라는 가사는 고요한 새벽, 나 자신과 마주하는 시간 속에서 깊은 위로를 건넵니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
+            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">테마: #상쾌한_출근길_발걸음을_가볍게</p>
+            
+            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo2-3.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px;">01. 데이식스(DAY6) - 한 페이지가 될 수 있게</h4>
+                    <p style="color: #aaa;"><strong>추천이유:</strong> 밴드 사운드 특유의 청량한 기타 리프가 아침의 무거운 공기를 상쾌하게 바꿔줍니다.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo2-4.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px;">02. 악뮤 (AKMU) - 후라이의 꿈</h4>
+                    <p style="color: #aaa;"><strong>추천이유:</strong> 통통 튀는 멜로디와 기분 좋아지는 가사로 출근길 발걸음을 가볍게 만들어줍니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #1e1e22; padding: 40px; border-radius: 10px;">
+            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">테마: #하루를_마무리하는_위로의_시간</p>
+            
+            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo2-5.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px;">01. 아이유(IU) - 하루 끝</h4>
+                    <p style="color: #aaa;"><strong>추천이유:</strong> 산뜻한 리듬과 가사가 하루의 마무리를 기분 좋게 만들어줍니다.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo2-6.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px;">02. 오왠(O.WHEN) - 오늘</h4>
+                    <p style="color: #aaa;"><strong>추천이유:</strong> 퇴근길이나 잠들기 전, 지친 감정을 토닥여주는 인디 감성의 곡입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Mood & Record. All rights reserved.</p></footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood & Record | 숨은 명곡 찾기</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #333; }
+    .logo { font-size: 24px; font-weight: bold; }
+    .gnb { display: flex; gap: 30px; }
+    .gnb li a { font-size: 16px; transition: color 0.3s, border-bottom 0.3s; padding-bottom: 5px; }
+    .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
+    
+    .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+    .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
+    .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
+    
+    footer { text-align: center; padding: 30px; border-top: 1px solid #333; color: #777; margin-top: 60px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Mood & Record</a></div>
+        <ul class="gnb">
+            <li><a href="situation.html">상황별 큐레이션</a></li>
+            <li><a href="genre.html">장르별 탐색</a></li>
+            <li><a href="artist.html">이달의 아티스트</a></li>
+            <li><a href="hidden.html" class="active">숨은 명곡 찾기</a></li>
+            <li><a href="trend.html">음악 트렌드</a></li>
+        </ul>
+    </header>
+
+    <div class="sub-container">
+        <h2 class="page-title">숨은 명곡 찾기</h2>
+        <p class="page-desc">대중의 시선에서 벗어나 있지만, 반드시 들어봐야 할 보석 같은 독립 음악과 명곡 발굴</p>
+
+        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
+            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">이번 주 발굴 트랙: #나만_알고_싶은_언더그라운드_음악</p>
+            
+            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo5-1.jpeg" alt="언더그라운드 앨범 1" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">01. 검정치마 - 기기괴괴</h4>
+                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>발굴 이유:</strong> 앨범 'Teen Troubles'에 수록된 곡으로, 타이틀곡들에 비해 상대적으로 덜 알려졌지만 검정치마만의 기괴하면서도 매혹적인 분위기가 극에 달한 곡입니다.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo5-2.jpeg" alt="언더그라운드 앨범 2" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">02. 딘(DEAN) - what2do</h4>
+                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>발굴 이유:</strong> 겨울 새벽이 떠오르는 차분한 피아노 선율과 세 보컬의 부드러운 화음이 서글픈 이별 감성을 극대화합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
+            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">이번 주 발굴 트랙: #타이틀곡에_가려진_완벽한_B_Side</p>
+            
+            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo5-3.jpeg" alt="B-Side 앨범 1" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">01. 세븐틴(SEVENTEEN) - 포옹(미니 6집 YOU MADE MY DAWN 수록)</h4>
+                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>발굴 이유:</strong> 이름처럼 듣고 있으면 마음이 편안해지고 위로받는 감성적인 곡입니다.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
+                <img src="img/photo5-4.jpeg" alt="B-Side 앨범 2" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
+                <div>
+                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">02. DAY6 (데이식스) - 'Congratulations(미니 1집 The Day 수록)</h4>
+                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>발굴 이유:</strong> 대중적인 타이틀곡과는 또 다른 록 밴드 특유의 에너지를 담고 있어, DAY6의 음악적 뿌리를 엿볼 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer><p>&copy; 2026 Mood & Record. All rights reserved.</p></footer>
+</body>
+</html>
