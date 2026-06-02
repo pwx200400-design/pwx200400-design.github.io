@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood & Record | 장르별 탐색</title>
     <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    
-   
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #333; }
-    .logo { font-size: 24px; font-weight: bold; }
-    .gnb { display: flex; gap: 30px; }
-    .gnb li a { font-size: 16px; transition: color 0.3s, border-bottom 0.3s; padding-bottom: 5px; }
-    .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
-    
-    .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-    .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
-    .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
-    
-    footer { text-align: center; padding: 30px; border-top: 1px solid #333; color: #777; margin-top: 60px; }
-</style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; display: block; }
+        ul { list-style: none; }
+
+        [class*="c_"] { float: left; padding: 10px; width: 100%; }
+        .clearfix::after { content: ""; display: block; clear: both; }
+
+        @media only screen and (min-width: 768px) {
+            .c_4 { width: 33.33%; }
+            .c_6 { width: 50%; }
+            .c_8 { width: 66.66%; }
+            .c_12 { width: 100%; }
+        }
+
+        header { padding: 20px 40px; border-bottom: 1px solid #333; overflow: hidden; }
+        .logo { font-size: 24px; font-weight: bold; float: left; margin-top: 5px; color: #00e5ff; }
+        .gnb { float: right; overflow: hidden; }
+        .gnb li { float: left; margin-left: 30px; }
+        .gnb li a { padding-bottom: 5px; border-bottom: 2px solid transparent; transition: 0.3s; }
+        .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
+
+        .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
+        .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
+
+        .theme-box { background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px; }
+        .theme-title { color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold; }
+        
+        .track-item { background: #25252a; padding: 20px; border-radius: 8px; margin-bottom: 25px; }
+        .track-img { float: left; width: 80px; height: 80px; border-radius: 8px; object-fit: cover; margin-right: 20px; border: 1px solid #444; }
+        
+        .track-info { overflow: hidden; padding-top: 5px; }
+        .track-info h4 { font-size: 18px; margin-bottom: 5px; color: #fff; }
+        .track-info p { color: #aaa; font-size: 15px; line-height: 1.5; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; color: #777; margin-top: 60px; clear: both; display: block; width: 100%; position: relative; z-index: 10; background-color: #121214; }
+
+        @media only screen and (max-width: 767px) {
+            header { text-align: center; padding: 15px; }
+            .logo { float: none; display: inline-block; margin-bottom: 15px; }
+            .gnb { float: none; display: inline-block; }
+            .gnb li { margin: 0 10px 10px 10px; }
+            .track-img { float: none; display: block; margin: 0 auto 15px auto; }
+            .track-info { text-align: center; }
+        }
+    </style>
 </head>
 <body>
-    <header>
+    
+    <header class="clearfix">
         <div class="logo"><a href="index.html">Mood & Record</a></div>
         <ul class="gnb">
             <li><a href="situation.html">상황별 큐레이션</a></li>
@@ -40,62 +70,62 @@
         <h2 class="page-title">장르별 탐색</h2>
         <p class="page-desc">특정 장르의 깊이를 탐구하고 새로운 음악적 스펙트럼을 넓히는 아카이브</p>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
-            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">테마: #깊은_밤_마음을_울리는_발라드</p>
+        <div class="theme-box">
+            <p class="theme-title">테마: #깊은_밤_마음을_울리는_발라드</p>
             
-            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo3-1.jpeg" alt="발라드 앨범 1" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">01. 싸이 - 기댈곳</h4>
-                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>추천이유:</strong> 삶에 지쳐 기댈 곳이 필요한 사람들에게, 음악 자체가 하나의 안식처가 되어주는 듯한 치유의 힘을 가진 곡입니다.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo3-1.jpeg" alt="발라드 앨범 1" class="track-img">
+                <div class="track-info">
+                    <h4>01. 싸이 - 기댈곳</h4>
+                    <p><strong>추천이유:</strong> 삶에 지쳐 기댈 곳이 필요한 사람들에게, 음악 자체가 하나의 안식처가 되어주는 듯한 치유의 힘을 가진 곡입니다.</p>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo3-2.jpeg" alt="발라드 앨범 2" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">02. 윤하 - 우산</h4>
-                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>추천이유:</strong> 담담하게 읊조리듯 시작해 감정을 고조시키는 윤하의 보컬은, 누군가에게 기대고 싶거나 혹은 잊지 못할 기억을 떠올리는 밤에 가장 잘 어울립니다.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo3-2.jpeg" alt="발라드 앨범 2" class="track-img">
+                <div class="track-info">
+                    <h4>02. 윤하 - 우산</h4>
+                    <p><strong>추천이유:</strong> 담담하게 읊조리듯 시작해 감정을 고조시키는 윤하의 보컬은, 누군가에게 기대고 싶거나 혹은 잊지 못할 기억을 떠올리는 밤에 가장 잘 어울립니다.</p>
                 </div>
             </div>
         </div>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
-            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">테마: #스트레스를_날려버릴_강렬한_락</p>
+        <div class="theme-box">
+            <p class="theme-title">테마: #스트레스를_날려버릴_강렬한_락</p>
             
-            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo3-3.jpeg" alt="락 앨범 1" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">01. YB(윤도현밴드) - 나는 나비</h4>
-                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>추천이유:</strong> 시원한 질주감이 느껴지는 곡으로, 에너제틱한 기타 사운드가 일상 속 스트레스를 날려버리기에 제격입니다.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo3-3.jpeg" alt="락 앨범 1" class="track-img">
+                <div class="track-info">
+                    <h4>01. YB(윤도현밴드) - 나는 나비</h4>
+                    <p><strong>추천이유:</strong> 시원한 질주감이 느껴지는 곡으로, 에너제틱한 기타 사운드가 일상 속 스트레스를 날려버리기에 제격입니다.</p>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo3-4.jpeg" alt="락 앨범 2" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">02. 김경호 - 나를 슬프게 하는 사람들</h4>
-                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>추천이유:</strong> 폭발적인 고음과 샤우팅으로 답답함을 단숨에 해소해 주는 명곡입니다.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo3-4.jpeg" alt="락 앨범 2" class="track-img">
+                <div class="track-info">
+                    <h4>02. 김경호 - 나를 슬프게 하는 사람들</h4>
+                    <p><strong>추천이유:</strong> 폭발적인 고음과 샤우팅으로 답답함을 단숨에 해소해 주는 명곡입니다.</p>
                 </div>
             </div>
         </div>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px;">
-            <p style="color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold;">테마: #지금_가장_트렌디한_K팝_플레이리스트</p>
+        <div class="theme-box">
+            <p class="theme-title">테마: #지금_가장_트렌디한_K팝_플레이리스트</p>
             
-            <div style="margin-bottom: 25px; display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo3-5.jpeg" alt="K팝 앨범 1" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">01. 코르티스(CORTIS) - REDRED</h4>
-                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>추천이유:</strong> 투박한 신디사이저와 캐치한 리듬이 어우러진 새로운 질감의 음악으로, 미완성 느낌 없이 꽉 채워진 완성도를 자랑합니다.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo3-5.jpeg" alt="K팝 앨범 1" class="track-img">
+                <div class="track-info">
+                    <h4>01. 코르티스(CORTIS) - REDRED</h4>
+                    <p><strong>추천이유:</strong> 투박한 신디사이저와 캐치한 리듬이 어우러진 새로운 질감의 음악으로, 미완성 느낌 없이 꽉 채워진 완성도를 자랑합니다.</p>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo3-6.jpeg" alt="K팝 앨범 2" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover; border: 1px solid #444;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px; color: #fff;">02. 아일릿(ILLIT) - It's Me</h4>
-                    <p style="color: #aaa; font-size: 15px; line-height: 1.5;"><strong>추천이유:</strong> 묵직한 킥 드럼과 테크노 팝 장르가 결합되어 한 번 들으면 잊히지 않는 강한 중독성을 자랑합니다.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo3-6.jpeg" alt="K팝 앨범 2" class="track-img">
+                <div class="track-info">
+                    <h4>02. 아일릿(ILLIT) - It's Me</h4>
+                    <p><strong>추천이유:</strong> 묵직한 킥 드럼과 테크노 팝 장르가 결합되어 한 번 들으면 잊히지 않는 강한 중독성을 자랑합니다.</p>
                 </div>
             </div>
         </div>
