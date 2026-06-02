@@ -1,31 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood & Record | 음악 트렌드</title>
     <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    
-    
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #333; }
-    .logo { font-size: 24px; font-weight: bold; }
-    .gnb { display: flex; gap: 30px; }
-    .gnb li a { font-size: 16px; transition: color 0.3s, border-bottom 0.3s; padding-bottom: 5px; }
-    .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
-    
-    .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-    .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
-    .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
-    
-    footer { text-align: center; padding: 30px; border-top: 1px solid #333; color: #777; margin-top: 60px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; display: block; }
+        ul { list-style: none; }
+
+        [class*="c_"] { float: left; padding: 10px; width: 100%; }
+        .clearfix::after { content: ""; display: block; clear: both; }
+
+        @media only screen and (min-width: 768px) {
+            .c_4 { width: 33.33%; }
+            .c_6 { width: 50%; }
+            .c_8 { width: 66.66%; }
+            .c_12 { width: 100%; }
+        }
+
+        header { padding: 20px 40px; border-bottom: 1px solid #333; overflow: hidden; }
+        .logo { font-size: 24px; font-weight: bold; float: left; margin-top: 5px; color: #00e5ff; }
+        .gnb { float: right; overflow: hidden; }
+        .gnb li { float: left; margin-left: 30px; }
+        .gnb li a { padding-bottom: 5px; border-bottom: 2px solid transparent; transition: 0.3s; }
+        .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
+
+        .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
+        .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
+
+        .trend-box { background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px; }
+        .trend-tag { color: #00e5ff; margin-bottom: 20px; font-size: 20px; font-weight: bold; }
+        .trend-img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #333; display: block; }
+        
+        .trend-title { font-size: 24px; margin-bottom: 10px; }
+        .trend-desc { color: #aaa; line-height: 1.8; margin-bottom: 15px; }
+        .trend-keywords { color: #00e5ff; font-size: 14px; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; color: #777; margin-top: 60px; clear: both; display: block; width: 100%; position: relative; z-index: 10; background-color: #121214; }
+
+        @media only screen and (max-width: 767px) {
+            header { text-align: center; padding: 15px; }
+            .logo { float: none; display: inline-block; margin-bottom: 15px; }
+            .gnb { float: none; display: inline-block; }
+            .gnb li { margin: 0 10px 10px 10px; }
+            .trend-img { height: 200px; }
+            .trend-box { padding: 25px; }
+        }
     </style>
 </head>
 <body>
-    <header>
+    
+    <header class="clearfix">
         <div class="logo"><a href="index.html">Mood & Record</a></div>
         <ul class="gnb">
             <li><a href="situation.html">상황별 큐레이션</a></li>
@@ -40,49 +68,37 @@
         <h2 class="page-title">음악 트렌드</h2>
         <p class="page-desc">현재 음악계의 흐름을 읽고, 의미 있는 움직임과 트렌드를 짚어주는 에디토리얼</p>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
-            <p style="color: #00e5ff; margin-bottom: 20px; font-size: 20px; font-weight: bold;">에디터스 리포트: #2026_인디_음악계의_새로운_물결</p>
-            <img src="img/photo6-1.jpeg" alt="어쿠스틱 트렌드" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #333;">
+        <div class="trend-box">
+            <p class="trend-tag">에디터스 리포트: #2026_인디_음악계의_새로운_물결</p>
+            <img src="img/photo6-1.jpeg" alt="어쿠스틱 트렌드" class="trend-img">
             
-            <div style="margin-bottom: 15px;">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">화려한 신스 사운드에서 벗어난 '어쿠스틱의 귀환'</h3>
-                <p style="color: #aaa; line-height: 1.8;">
-                    <strong>심층 분석:</strong> 상업적 차트와 자극적인 숏폼(Shorts) 음악에 피로감을 느낀 리스너들이 아날로그 감성으로 회귀하고 있습니다. 기계적인 비트 대신 통기타와 피아노 선율만으로 꽉 찬 감동을 주는 어쿠스틱 장르가 인디 씬의 주류로 다시 떠오르는 현상을 분석합니다.
-                </p>
-            </div>
-            <div>
-                <p style="color: #00e5ff; font-size: 14px;">▶ 주목할 트렌드 키워드: #언플러그드 #오가닉사운드 #위로의_메시지</p>
-            </div>
+            <h3 class="trend-title">화려한 신스 사운드에서 벗어난 '어쿠스틱의 귀환'</h3>
+            <p class="trend-desc">
+                <strong>심층 분석:</strong> 상업적 차트와 자극적인 숏폼(Shorts) 음악에 피로감을 느낀 리스너들이 아날로그 감성으로 회귀하고 있습니다. 기계적인 비트 대신 통기타와 피아노 선율만으로 꽉 찬 감동을 주는 어쿠스틱 장르가 인디 씬의 주류로 다시 떠오르는 현상을 분석합니다.
+            </p>
+            <p class="trend-keywords">▶ 주목할 트렌드 키워드: #언플러그드 #오가닉사운드 #위로의_메시지</p>
         </div>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px;">
-            <p style="color: #00e5ff; margin-bottom: 20px; font-size: 20px; font-weight: bold;">에디터스 리포트: #시티팝의_끝없는_진화_어디까지_왔나</p>
-            <img src="img/photo6-2.jpeg" alt="시티팝 트렌드" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #333;">
+        <div class="trend-box">
+            <p class="trend-tag">에디터스 리포트: #시티팝의_끝없는_진화_어디까지_왔나</p>
+            <img src="img/photo6-2.jpeg" alt="시티팝 트렌드" class="trend-img">
             
-            <div style="margin-bottom: 15px;">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">뉴트로를 넘어 하나의 독립된 장르로 정착한 현대적 시티팝</h3>
-                <p style="color: #aaa; line-height: 1.8;">
-                    <strong>심층 분석:</strong> 과거 80년대의 향수를 자극하던 레트로 열풍에서 시작된 시티팝이, 이제는 세련된 현대적 R&B 및 하우스 비트와 결합하며 완전히 새로운 하위 장르를 형성하고 있습니다. 도심의 야경을 연상시키는 몽환적인 분위기의 변화를 짚어봅니다.
-                </p>
-            </div>
-            <div>
-                <p style="color: #00e5ff; font-size: 14px;">▶ 주목할 트렌드 키워드: #미드나잇_드라이브 #퓨처펑크 #현대적_재해석</p>
-            </div>
+            <h3 class="trend-title">뉴트로를 넘어 하나의 독립된 장르로 정착한 현대적 시티팝</h3>
+            <p class="trend-desc">
+                <strong>심층 분석:</strong> 과거 80년대의 향수를 자극하던 레트로 열풍에서 시작된 시티팝이, 이제는 세련된 현대적 R&B 및 하우스 비트와 결합하며 완전히 새로운 하위 장르를 형성하고 있습니다. 도심의 야경을 연상시키는 몽환적인 분위기의 변화를 짚어봅니다.
+            </p>
+            <p class="trend-keywords">▶ 주목할 트렌드 키워드: #미드나잇_드라이브 #퓨처펑크 #현대적_재해석</p>
         </div>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px;">
-            <p style="color: #00e5ff; margin-bottom: 20px; font-size: 20px; font-weight: bold;">에디터스 리포트: #나만의_방에서_시작되는_우주</p>
-            <img src="img/photo6-3.jpeg" alt="베드룸팝 트렌드" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #333;">
+        <div class="trend-box">
+            <p class="trend-tag">에디터스 리포트: #나만의_방에서_시작되는_우주</p>
+            <img src="img/photo6-3.jpeg" alt="베드룸팝 트렌드" class="trend-img">
             
-            <div style="margin-bottom: 15px;">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">완벽하지 않아서 더 매력적인 로파이(Lo-Fi) 감성과 베드룸 팝</h3>
-                <p style="color: #aaa; line-height: 1.8;">
-                    <strong>심층 분석:</strong> 대형 스튜디오의 정교한 믹싱 대신, 홈 레코딩 특유의 거칠고 소박한 질감을 살린 '베드룸 팝(Bedroom Pop)'이 트렌드로 굳혀졌습니다. 뮤지션의 사적인 공간에서 탄생한 진솔한 이야기가 대중과 어떻게 내밀한 공감대를 형성하는지 탐구합니다.
-                </p>
-            </div>
-            <div>
-                <p style="color: #00e5ff; font-size: 14px;">▶ 주목할 트렌드 키워드: #홈레코딩 #베드룸팝 #빈티지_사운드</p>
-            </div>
+            <h3 class="trend-title">완벽하지 않아서 더 매력적인 로파이(Lo-Fi) 감성과 베드룸 팝</h3>
+            <p class="trend-desc">
+                <strong>심층 분석:</strong> 대형 스튜디오의 정교한 믹싱 대신, 홈 레코딩 특유의 거칠고 소박한 질감을 살린 '베드룸 팝(Bedroom Pop)'이 트렌드로 굳혀졌습니다. 뮤지션의 사적인 공간에서 탄생한 진솔한 이야기가 대중과 어떻게 내밀한 공감대를 형성하는지 탐구합니다.
+            </p>
+            <p class="trend-keywords">▶ 주목할 트렌드 키워드: #홈레코딩 #베드룸팝 #빈티지_사운드</p>
         </div>
     </div>
 
