@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood & Record | 이달의 아티스트</title>
     <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #333; }
-    .logo { font-size: 24px; font-weight: bold; }
-    .gnb { display: flex; gap: 30px; }
-    .gnb li a { font-size: 16px; transition: color 0.3s, border-bottom 0.3s; padding-bottom: 5px; }
-    .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
-    
-    .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-    .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
-    .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
-    
-    footer { text-align: center; padding: 30px; border-top: 1px solid #333; color: #777; margin-top: 60px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #121214; color: #ffffff; font-family: 'Pretendard', sans-serif; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; display: block; }
+        ul { list-style: none; }
+
+        [class*="c_"] { float: left; padding: 10px; width: 100%; }
+        .clearfix::after { content: ""; display: block; clear: both; }
+
+        @media only screen and (min-width: 768px) {
+            .c_4 { width: 33.33%; }
+            .c_6 { width: 50%; }
+            .c_8 { width: 66.66%; }
+            .c_12 { width: 100%; }
+        }
+
+        header { padding: 20px 40px; border-bottom: 1px solid #333; overflow: hidden; }
+        .logo { font-size: 24px; font-weight: bold; float: left; margin-top: 5px; color: #00e5ff; }
+        .gnb { float: right; overflow: hidden; }
+        .gnb li { float: left; margin-left: 30px; }
+        .gnb li a { padding-bottom: 5px; border-bottom: 2px solid transparent; transition: 0.3s; }
+        .gnb li a:hover, .gnb li a.active { color: #00e5ff; border-bottom: 2px solid #00e5ff; }
+
+        .sub-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .page-title { font-size: 32px; color: #00e5ff; margin-bottom: 10px; }
+        .page-desc { font-size: 16px; color: #aaa; margin-bottom: 40px; }
+
+        .theme-box { background: #1e1e22; padding: 40px; border-radius: 10px; margin-bottom: 40px; }
+        .theme-title { color: #00e5ff; margin-bottom: 30px; font-size: 20px; font-weight: bold; }
+        
+        .track-item { background: #25252a; padding: 20px; border-radius: 8px; margin-bottom: 25px; }
+        .track-img { float: left; width: 80px; height: 80px; border-radius: 8px; object-fit: cover; margin-right: 20px; }
+        
+        .track-info { overflow: hidden; padding-top: 5px; }
+        .track-info h4 { font-size: 18px; margin-bottom: 5px; }
+        .track-info p { color: #aaa; font-size: 15px; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; color: #777; margin-top: 60px; clear: both; display: block; width: 100%; position: relative; z-index: 10; background-color: #121214; }
+
+        @media only screen and (max-width: 767px) {
+            header { text-align: center; padding: 15px; }
+            .logo { float: none; display: inline-block; margin-bottom: 15px; }
+            .gnb { float: none; display: inline-block; }
+            .gnb li { margin: 0 10px 10px 10px; }
+            .track-img { float: none; display: block; margin: 0 auto 15px auto; }
+            .track-info { text-align: center; }
+        }
     </style>
 </head>
 <body>
-    <header>
+    
+    <header class="clearfix">
         <div class="logo"><a href="index.html">Mood & Record</a></div>
         <ul class="gnb">
             <li><a href="situation.html">상황별 큐레이션</a></li>
@@ -39,33 +70,33 @@
         <h2 class="page-title">이달의 아티스트</h2>
         <p class="page-desc">매월 한 명의 아티스트를 선정하여 그들의 음악 세계를 심층적으로 조명하는 포커스 매거진</p>
         
-        <div style="background: #1e1e22; padding: 50px; border-radius: 10px; border-left: 5px solid #00e5ff;">
-            <p style="color: #00e5ff; margin-bottom: 15px; font-size: 20px; font-weight: bold;">Focus on: 검정치마</p>
+        <div class="theme-box" style="border-left: 5px solid #00e5ff; padding: 50px;">
+            <p class="theme-title" style="margin-bottom: 15px;">Focus on: 검정치마</p>
             <h3 style="font-size: 28px; margin-bottom: 20px;">대체 불가능한 아날로그 감성과 깊이 있는 서사</h3>
             
-            <img src="img/photo4-1.jpeg" alt="검정치마 아티스트 썸네일" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px; border: 1px solid #333;">
+            <img src="img/photo4-1.jpeg" alt="검정치마 아티스트 썸네일" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px; border: 1px solid #333; display: block;">
 
             <p style="color: #ddd; line-height: 1.8; font-size: 16px;">
                 <strong>에디터 리뷰:</strong> 그가 노래하는 사랑과 일상에 대한 심층 에디토리얼 가이드. 특유의 빈티지한 사운드와 문학적인 가사가 어떻게 우리의 감성을 자극하는지 집중 분석합니다. 대중적인 유행을 좇기보다는 자신만의 확고한 음악적 색깔을 유지하며 수많은 리스너들의 새벽을 위로하는 그의 발자취를 따라가 봅니다.
             </p>
         </div>
 
-        <div style="background: #1e1e22; padding: 40px; border-radius: 10px;">
+        <div class="theme-box">
             <h3 style="color: #00e5ff; margin-bottom: 30px; font-size: 22px;">🎧 검정치마의 대표곡</h3>
             
-            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-                <img src="img/photo4-2.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px;">기다린 만큼, 더</h4>
-                    <p style="color: #aaa; font-size: 15px;"> 덤덤하게 시작해 후반부로 갈수록 고조되는 보컬과 밴드 사운드가 깊은 여운의 노래</p>
+            <div class="track-item clearfix">
+                <img src="img/photo4-2.jpeg" alt="앨범 아트" class="track-img">
+                <div class="track-info">
+                    <h4>기다린 만큼, 더</h4>
+                    <p>덤덤하게 시작해 후반부로 갈수록 고조되는 보컬과 밴드 사운드가 깊은 여운의 노래</p>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 20px; align-items: center; background: #25252a; padding: 20px; border-radius: 8px;">
-                <img src="img/photo4-3.jpeg" alt="앨범 아트" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
-                <div>
-                    <h4 style="font-size: 18px; margin-bottom: 5px;">Everything</h4>
-                    <p style="color: #aaa; font-size: 15px;">당신의 세상 속 모든 것이 되어줄 것 같은 깊은 울림의 노래.</p>
+            <div class="track-item clearfix">
+                <img src="img/photo4-3.jpeg" alt="앨범 아트" class="track-img">
+                <div class="track-info">
+                    <h4>Everything</h4>
+                    <p>당신의 세상 속 모든 것이 되어줄 것 같은 깊은 울림의 노래.</p>
                 </div>
             </div>
         </div>
